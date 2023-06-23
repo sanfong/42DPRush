@@ -1,0 +1,202 @@
+html{
+    scroll-behavior: smooth;
+    }
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 999;
+}
+
+.side-menu {
+    /* remove bullets */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.side-item {
+    box-sizing: border-box;
+    background-color: #f2f3f5;
+    color: #45505b;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    padding: 0px 16px;
+    margin-bottom: 8px;
+    border-radius: 50px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.side-item:is(:hover, :focus) {
+    background-color: #45505b;
+    color: white;
+    width: 100%;
+}
+
+.side-item i {
+    font-size: 24px;
+    transition: color 0.1s;
+}
+
+.side-item span {
+    padding: 0px 7px;
+    opacity: 0;
+    white-space: nowrap;
+    color: white;
+    transition: 0.2s;
+}
+
+.side-item:is(:hover, :focus) span {
+    opacity: 1;
+}
+
+#home {
+    position: relative;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+
+.home-bg {
+    background-image: url("https://coolwallpapers.me/picsup/3056875-background_business_communication_computer_creativity_cup_desk_digital_display_furniture_indoors_information_internet_keyboard_monitor_mouse_office_pc_room_table_technology_white_window_wooden_wo.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-row: 1/-1;
+    grid-column: 1/-1;
+    filter: blur(4px);
+    z-index: -1;
+}
+
+.home-content {
+    grid-row: 1/-1;
+    grid-column: 1/-1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-table {
+    display: flex;
+    flex-direction: row;
+    /* flex-direction: column-reverse; for mobile */
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 0px 10px rgba(127, 127, 127, 0.6);
+}
+
+.card-table h1 {
+    font-size: 36px;
+}
+
+.img-profile {
+    min-width: 200px;
+    max-width: 300px;
+    width: 20vw;
+    align-self: center;
+}
+
+.card-table article {
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section-title {
+    font-weight: bold;
+    font-size: 56px;
+    background-color: rgb(250, 250, 250);
+    padding: 0.5em;
+    text-align: center;
+}
+
+.img-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 100px 10%;
+    background-color: #57636f;
+}
+
+.skill-card {
+    width: 200px;
+    height: 250px;
+    border-radius: 20px;
+    background-color: #f2f3f5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: 0.2s;
+}
+
+.skill-card:hover {
+    box-shadow: 0 0px 10px whitesmoke;
+    transform: scale(1.05);
+}
+
+.skill-card img {
+    width: 50%;
+    object-fit: contain;
+}
+
+.skill-game {
+    border-radius: 5px;
+    width: 100vw;
+    max-width: 700px;
+    transition: 0.2s;
+}
+
+.skill-game:hover {
+    box-shadow: 0 0px 10px whitesmoke;
+    transform: scale(1.15);
+}
+
+.contact-card {
+    display: flex;
+    justify-content: end;
+}
+
+.contact-card i {
+    font-size: 60px;
+    width: 125px;
+    text-align: center;
+}
+
+.contact-card h1 {
+    font-size: 40px;
+    margin: 0;
+    line-height: 60px;
+}
+
+@media screen and (max-width: 900px) {
+    .card-table {
+        flex-direction: column-reverse;
+    }
+
+    .card-table article {
+        text-align: center;
+    }
+}
